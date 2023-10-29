@@ -7,6 +7,8 @@ It is IDE agnostic, but has some features which ease the devcontainer use from E
 - provides a launchpad config
 - it fixes nrepl port to 12345
 - configures port forwarding of port 12345
+- it installs as well `clojure-lsp` inside the devcontainer. A working `clojure-lsp` in Emacs when connecting to the devcontainer
+  requires a certain Emacs clojure-lsp configuration (TODO: details)
 
 This results in being able to do a `cider-connect` to `localhost:12345` when setting up the port forward accordingly.
 (which can be further automatised by usage of [devpod](https://devpod.sh/)  
