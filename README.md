@@ -10,8 +10,10 @@ It is IDE agnostic, but has some features which ease the devcontainer use from E
 - it installs as well `clojure-lsp` inside the devcontainer. A working `clojure-lsp` in Emacs when connecting to the devcontainer
   requires a certain Emacs clojure-lsp configuration (TODO: details)
 
-This results in being able to do a `cider-connect` to `localhost:12345` when setting up the port forward accordingly.
+This results in being able to do a `cider-connect` to `localhost:12345` from Emacs when setting up the port forward accordingly.
 (which can be further automatised by usage of [devpod](https://devpod.sh/)  
+
+It works as well in VSCode and Codespaces unmodified.
 
 ## Usage
 
