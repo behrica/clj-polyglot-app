@@ -1,6 +1,15 @@
 # behrica/polyglot-app
 
-FIXME: my new template.
+A template to create a polyglot app in Clojure.
+It provides a [devcontainer.json](https://containers.dev) configuration which can setup a devcontainer with Clojure, python + R.
+
+It is IDE agnostic, but has some features which ease the devcontainer use from Emacs:
+- provides a launchpad config
+- it fixes nrepl port to 12345
+- configures port forwarding of port 12345
+
+This results in being able to do a `cider-connect` to `localhost:12345` when setting up the port forward accordingly.
+(which can be further automatised by usage of [devpod](https://devpod.sh/)  
 
 ## Usage
 
