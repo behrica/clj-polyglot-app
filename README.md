@@ -20,7 +20,7 @@ FIXME: write usage documentation!
 This is a template project for use with [deps-new](https://github.com/seancorfield/deps-new).
 It will produce a new library project when run:
 
-    $ clojure -Sdeps '{:deps {net.clojars.behrica/polyglot-app {:git/url "https://github.com/behrica/clj-polyglot-app" :git/sha "8e0260804fefad2e0ac31ca621f5e3d871ae168d"}}}' -Tnew create :template behrica/polyglot-app :name myusername/mycoollib
+    $ clojure -Sdeps '{:deps {net.clojars.behrica/polyglot-app {:git/url "https://github.com/behrica/clj-polyglot-app" :git/sha "a0fe918f8f55bb7989a589aae26b7fb3a6998190"}}}' -Tnew create :template behrica/polyglot-app :name myusername/mycoollib
 
 Assuming you have installed `deps-new` as your `new` "tool" via:
 
