@@ -63,10 +63,10 @@ In my view, usage of [devpod](https://devpod.sh) is currently the simplest way t
 running localy or remotely (like on a ssh remote host , in Kubernetes or other runtimes)
 But a more manual approach using [devcontainer-cl](https://github.com/devcontainers/cli) and manual port forwarding with `ssh` is possible as well.
 
-### Step when using Emacs and devpod
+### Steps when using Emacs and devpod
 1) `devpod up` in code directory or even pointing to GitHub directly which builds and starts container if needed.
-    The "location" where to run the Docker container can be choosen from "local Docker", remote Docker on ssh host, Kubernetes and others 
-3) `devpod ssh` to login into container (setups the port forwarding as well) and run `bin/launchpad`  which starts nREPL sever 
+    The location where to run the Docker container can be choosen from "local Docker", remote Docker on ssh host, Kubernetes and others 
+3) `devpod ssh` to login into container (setups the port forwarding as well) and run `bin/launchpad`  which starts nREPL sever on port 12345
 4) In Emacs open files from inside container via TRAMP `/ssh:xxxxx`
 5) In Emacs run `cider-connect` to `localhost:12345`
 
