@@ -37,6 +37,16 @@ file -- that it is valid EDN and it satisfies the `deps-new` Spec for template f
 
     $ clojure -T:build test
 
+## Special suuport for Emacs/CIDER
+
+The configuration generated fixes the nrepl port to 12345. This makes remote connections easier, as we can port forward a known port.
+The `devcontainer.json` spec contains 12345 as "port to be forwarded", so assuming the "right" (see below) tooling on client side
+the forwarding can be automated. 
+The generated [launchpad](https://github.com/lambdaisland/launchpad) configuration starts cider-nrepl on port 12345 by default when calling 
+`bin/launchpad`
+
+Having done this we can therefore `cider-connect` to `localhost:12345` from inside a local emacs
+
 ## License
 
 Copyright © 2023 Carsten
