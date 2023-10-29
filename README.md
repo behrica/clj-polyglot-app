@@ -1,6 +1,6 @@
 # behrica/polyglot-app
 
-A `clj-new` template to create a polyglot app in Clojure.
+A `deps-new` template to create a polyglot app in Clojure.
 It provides a [devcontainer.json](https://containers.dev) configuration which can setup a devcontainer with Clojure, python + R.
 
 It is IDE agnostic, but has some features which ease the devcontainer use from Emacs:
