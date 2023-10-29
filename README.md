@@ -18,9 +18,9 @@ This results in being able to do a `cider-connect` to `localhost:12345` when set
 FIXME: write usage documentation!
 
 This is a template project for use with [deps-new](https://github.com/seancorfield/deps-new).
-As originally generated, it will produce a new library project when run:
+It will produce a new library project when run:
 
-    $ clojure -Sdeps '{:deps {net.clojars.behrica/polyglot-app {:local/root "."}}}' -Tnew create :template behrica/polyglot-app :name myusername/mycoollib
+    $ clojure -Sdeps '{:deps {net.clojars.behrica/polyglot-app {:git/url "https://github.com/behrica/clj-polyglot-app" :git/sha "8e0260804fefad2e0ac31ca621f5e3d871ae168d"}}}' -Tnew create :template behrica/polyglot-app :name myusername/mycoollib
 
 Assuming you have installed `deps-new` as your `new` "tool" via:
 
