@@ -1,2 +1,0 @@
-{:project-specs [{:project-path "deps.edn"
-                  :classpath-cmd ["/home/vscode/.asdf/shims/clojure" "-Spath"]}]}
