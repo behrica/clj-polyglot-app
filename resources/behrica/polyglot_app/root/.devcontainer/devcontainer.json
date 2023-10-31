@@ -28,6 +28,6 @@
 			]
 		}
 	},
-
-	"remoteUser": "vscode",
+    "postCreateCommand": "sudo ln -fs /home/vscode/.asdf/shims/clojure /usr/local/bin/",
+	"remoteUser": "vscode"
 }
