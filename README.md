@@ -24,7 +24,7 @@ VSCode does not need any of the above, as by design "part of VSCode" get execute
 This is a template project for use with [deps-new](https://github.com/seancorfield/deps-new).
 It will produce a new library project when run:
 
-    $ clojure -Sdeps '{:deps {net.clojars.behrica/polyglot-app {:git/url "https://github.com/behrica/clj-polyglot-app" :git/sha "b7010137355d273550e72567d88ffce635933aeb"}}}' -Tnew create :template behrica/polyglot-app :name myusername/mycoollib
+    $ clojure -Sdeps '{:deps {net.clojars.behrica/polyglot-app {:git/url "https://github.com/behrica/clj-polyglot-app" :git/sha "f7ccf22a8339b3a0a4264234c14e41e501a17574"}}}' -Tnew create :template behrica/polyglot-app :name myusername/mycoollib
 
 Assuming you have installed `deps-new` as your `new` "tool" via:
 
