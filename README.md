@@ -52,6 +52,18 @@ The generated [launchpad](https://github.com/lambdaisland/launchpad) configurati
 
 Having done this we can therefore `cider-connect` to `localhost:12345` from inside a local emacs
 
+### Emacs support for remote `clojure-lsp`
+In order to Emacs working with the remote `clojure-lps` server, we need this configuration snippet in Emacs:
+See here for [details](https://emacs-lsp.github.io/lsp-mode/page/remote)
+
+```lisp
+(lsp-register-client
+    (make-lsp-client :new-connection (lsp-tramp-connection "clojure-lsp")
+                     :major-modes '(clojure-mode)
+                     :remote? t
+                     :server-id 'clojure-lsp-remote))
+```
+
 ## Tooling needed to get it working with Emacs
 
 1. We need a tool which interprets the `devcontainer.json` spec and generates a Docker image out of it and starts this
