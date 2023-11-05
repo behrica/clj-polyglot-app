@@ -25,7 +25,9 @@ VSCode does not need any of the above, as by design "part of VSCode" get execute
 This is a template project for use with [deps-new](https://github.com/seancorfield/deps-new).
 It will produce a new library project when run (assuming you have installed `deps-new` as your `new` "tool")
 
-    $ clojure -Sdeps '{:deps {net.clojars.behrica/polyglot-app {:git/url "https://github.com/behrica/clj-polyglot-app" :git/sha "f7ccf22a8339b3a0a4264234c14e41e501a17574"}}}' -Tnew create :template behrica/polyglot-app :name myusername/mycoollib
+```bash
+clojure -Sdeps '{:deps {net.clojars.behrica/polyglot-app {:git/url "https://github.com/behrica/clj-polyglot-app" :git/sha "f7ccf22a8339b3a0a4264234c14e41e501a17574"}}}' -Tnew create :template behrica/polyglot-app :name myusername/mycoollib
+```
 
 You can use those parameters:
 - :with-python (true/false), default false -> if python feature get added to devcontainer.json
@@ -77,9 +79,9 @@ running localy or remotely (like on a ssh remote host , in Kubernetes or other r
 But a more manual approach using [devcontainer-cl](https://github.com/devcontainers/cli) and manual port forwarding with `ssh` is possible as well.
 
 ### Steps when using Emacs and devpod
-1) `devpod up` in code directory or even pointing to GitHub directly which builds and starts container if needed.
+1) `devpod up .` in code directory or even pointing to GitHub directly which builds and starts container if needed.
     The location where to run the Docker container can be choosen from "local Docker", remote Docker on ssh host, Kubernetes and others 
-3) `devpod ssh` to login into container (setups the port forwarding as well) and run `bin/launchpad`  which starts nREPL sever on port 12345
+3) `devpod ssh .` to login into container (setups the port forwarding as well) and run `bin/launchpad`  which starts nREPL sever on port 12345
 4) In Emacs open files from inside container via TRAMP `/ssh:xxxxx`
 5) In Emacs run `cider-connect` to `localhost:12345`
 
