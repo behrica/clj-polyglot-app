@@ -26,7 +26,7 @@ This is a template project for use with [deps-new](https://github.com/seancorfie
 It will produce a new library project when run (assuming you have installed `deps-new` as your `new` "tool")
 
 ```bash
-clojure -Sdeps '{:deps {net.clojars.behrica/polyglot-app {:git/url "https://github.com/behrica/clj-polyglot-app" :git/sha "f7ccf22a8339b3a0a4264234c14e41e501a17574"}}}' -Tnew create :template behrica/polyglot-app :name myusername/mycoollib
+clojure -Sdeps '{:deps {net.clojars.behrica/polyglot-app {:git/url "https://github.com/behrica/clj-polyglot-app" :git/sha "a8622e0627e633e5cef5a9f7017470e2925299be"}}}' -Tnew create :template behrica/polyglot-app :name myusername/mycoollib
 ```
 
 You can use those parameters:
