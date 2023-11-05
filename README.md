@@ -1,7 +1,8 @@
 # behrica/polyglot-app
 
 A `deps-new` template to create a polyglot app in Clojure.
-It provides a [devcontainer.json](https://containers.dev) configuration which can setup a devcontainer with Clojure, python + R.
+It provides a [devcontainer.json](https://containers.dev) configuration which can setup a devcontainer with Clojure,
+and optionally with python + R.
 
 It is IDE agnostic, but has some features which ease the devcontainer use from Emacs:
 
@@ -22,17 +23,17 @@ VSCode does not need any of the above, as by design "part of VSCode" get execute
 ## Usage
 
 This is a template project for use with [deps-new](https://github.com/seancorfield/deps-new).
-It will produce a new library project when run:
+It will produce a new library project when run (assuming you have installed `deps-new` as your `new` "tool")
 
     $ clojure -Sdeps '{:deps {net.clojars.behrica/polyglot-app {:git/url "https://github.com/behrica/clj-polyglot-app" :git/sha "f7ccf22a8339b3a0a4264234c14e41e501a17574"}}}' -Tnew create :template behrica/polyglot-app :name myusername/mycoollib
 
-Assuming you have installed `deps-new` as your `new` "tool" via:
+You can use those parameters:
+- :with-python (true/false), default false -> if python feature get added to devcontainer.json
+- :with-R (true/false), default false -> if R feature gets added to devcontainer.json
 
-```bash
-clojure -Ttools install-latest :lib io.github.seancorfield/deps-new :as new
-```
+The versions of python and R can be changed in the generated `devcontainer.json`, look here: https://containers.dev/features
+for feature "Python" and "R (via apt)"
 
-> Note: once the template has been published (to a public git repo), the invocation will be the same, except the `:local/root` dependency will be replaced by a git or Maven-like coordinate.
 
 Run this template project's tests (by default, this just validates your template's `template.edn`
 file -- that it is valid EDN and it satisfies the `deps-new` Spec for template files):

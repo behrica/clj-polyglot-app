@@ -1,19 +1,14 @@
 {
-	"name": "my Clojure app",
+	"name": "{{raw-name}}",
 	"build": {
 		"dockerfile": "Dockerfile"
 
 		},
 
 
-    "features": {
-	    	"ghcr.io/devcontainers-contrib/features/clojure-asdf:2": {},
-		"ghcr.io/devcontainers-contrib/features/bash-command:1": {"command": "apt-get update && apt-get install -y rlwrap"},
-		"ghcr.io/devcontainers/features/python:1": {},
-		"ghcr.io/rocker-org/devcontainer-features/r-apt:0": {}
+    "features": {{features-str}},
 
 
-},
 	"remoteEnv": { "PATH": "${containerEnv:PATH}:/home/vscode/.asdf/shims" },
 	"forwardPorts": ["12345","7777"],
 	"customizations": {
@@ -28,6 +23,7 @@
 			]
 		}
 	},
+	"updateContentCommand": "clojure -P",
     "postCreateCommand": "sudo ln -fs /home/vscode/.asdf/shims/clojure /usr/local/bin/",
 	"remoteUser": "vscode"
 }
