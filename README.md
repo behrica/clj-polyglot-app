@@ -30,7 +30,9 @@ clojure -Sdeps '{:deps {net.clojars.behrica/polyglot-app {:git/url "https://gith
 :git/sha "4f0d0bc" :git/tag "v0.1" }}}' -Tnew create :template behrica/polyglot-app :name myusername/mycoollib
 ```
 
-You can use those parameters:
+### Parameters for template
+
+You can use those parameters when suing te template:
 - :with-python (true/false), default false -> if python feature get added to devcontainer.json
 - :with-R (true/false), default false -> if R feature gets added to devcontainer.json
 
