@@ -10,7 +10,7 @@ It is IDE agnostic, but has some features which ease the devcontainer use from E
 - it fixes nrepl port to 12345
 - configures port forwarding of port 12345
 - it installs as well `clojure-lsp` inside the devcontainer. A working `clojure-lsp` in Emacs when connecting to the devcontainer
-  requires a certain Emacs clojure-lsp configuration (TODO: details)
+  requires a certain Emacs clojure-lsp configuration, see below
 - it assumes that we run Emacs localy, while the dev container runs in a Docker anywhere.
  
 
