@@ -30,6 +30,15 @@ clojure -Sdeps '{:deps {net.clojars.behrica/polyglot-app {:git/url "https://gith
 :git/sha "4f0d0bc" :git/tag "v0.1" }}}' -Tnew create :template behrica/polyglot-app :name myusername/mycoollib
 ```
 
+There is an alpha version, which integrates [enrich-classpath](https://github.com/clojure-emacs/enrich-classpath) 
+It does not use `launchpad` anymore, but a "enriched" nrepl can get started via `enriched-clojure -M:nrepl`
+```bash
+clojure -Sdeps '{:deps {net.clojars.behrica/polyglot-app {:git/url "https://github.com/behrica/clj-polyglot-app" 
+:git/sha "0063656" :git/tag "v0.2alpha" }}}' -Tnew create :template behrica/polyglot-app :name myusername/mycoolapp
+```
+
+
+
 ### Parameters for template
 
 You can use those parameters when suing te template:
