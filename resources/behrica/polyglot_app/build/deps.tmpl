@@ -9,4 +9,9 @@
   :build {:deps {io.github.clojure/tools.build
                  {:mvn/version "0.9.6"}
                  slipset/deps-deploy {:mvn/version "0.2.0"}}
-          :ns-default build}}}
+          :ns-default build}
+  :nrepl  {:extra-deps {cider/cider-nrepl {:mvn/version "0.43.1"}}
+           :main-opts ["-m" "nrepl.cmdline"
+                       "-p" "12345"
+                       "-b" "0.0.0.0"
+                       "--middleware" "[cider.nrepl/cider-middleware]"]}}}
