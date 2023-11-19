@@ -1,7 +1,9 @@
 # Change Log
 All notable changes to this project will be documented in this file. This change log follows the conventions of [keepachangelog.com](http://keepachangelog.com/).
 
-## [Unreleased]
+## [Unreleased
+
+- integates with [enrich-classpath](https://github.com/clojure-emacs/enrich-classpath)
 
 ## [0.1]
 - support for options :with-python and :with-R
