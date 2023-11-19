@@ -25,13 +25,17 @@ VSCode does not need any of the above, as by design "part of VSCode" get execute
 This is a template project for use with [deps-new](https://github.com/seancorfield/deps-new).
 It will produce a new library project when run (assuming you have installed `deps-new` as your `new` "tool")
 
+### 0.1 release
 ```bash
 clojure -Sdeps '{:deps {net.clojars.behrica/polyglot-app {:git/url "https://github.com/behrica/clj-polyglot-app" 
 :git/sha "4f0d0bc" :git/tag "v0.1" }}}' -Tnew create :template behrica/polyglot-app :name myusername/mycoollib
 ```
 
+### 0.2alpha release
 There is an alpha version, which integrates [enrich-classpath](https://github.com/clojure-emacs/enrich-classpath) 
-It does not use `launchpad` anymore, but a "enriched" nrepl can get started via `enriched-clojure -M:nrepl`
+It does not use `launchpad` anymore, but a "enriched" nrepl can get started via `enriched-clojure -M:nrepl` 
+in the devcontainer when using the 0.2alpha template
+
 ```bash
 clojure -Sdeps '{:deps {net.clojars.behrica/polyglot-app {:git/url "https://github.com/behrica/clj-polyglot-app" 
 :git/sha "0063656" :git/tag "v0.2alpha" }}}' -Tnew create :template behrica/polyglot-app :name myusername/mycoolapp
