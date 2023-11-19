@@ -6,12 +6,13 @@ and optionally with python + R.
 
 It is IDE agnostic, but has some features which ease the devcontainer use from Emacs:
 
-- provides a launchpad config
+- provides a nrepl start config
 - it fixes nrepl port to 12345
 - configures port forwarding of port 12345
 - it installs as well `clojure-lsp` inside the devcontainer. A working `clojure-lsp` in Emacs when connecting to the devcontainer
   requires a certain Emacs clojure-lsp configuration, see below
 - it assumes that we run Emacs localy, while the dev container runs in a Docker anywhere.
+- integrates with [enrich-classpath](https://github.com/clojure-emacs/enrich-classpath)
  
 
 This results in being able to do a `cider-connect` to `localhost:12345` from Emacs when setting up the port forward accordingly.
