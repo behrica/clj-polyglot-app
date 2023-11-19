@@ -32,7 +32,7 @@ clojure -Sdeps '{:deps {net.clojars.behrica/polyglot-app {:git/url "https://gith
 ```
 
 ### 0.2alpha release
-There is an alpha version, which integrates [enrich-classpath](https://github.com/clojure-emacs/enrich-classpath) 
+There is an alpha version, which integrates [enrich-classpath](https://github.com/clojure-emacs/enrich-classpath). 
 It does not use `launchpad` anymore, but a "enriched" nrepl can get started via `enriched-clojure -M:nrepl` 
 in the devcontainer when using the 0.2alpha template
 
@@ -98,9 +98,10 @@ But a more manual approach using [devcontainer-cl](https://github.com/devcontain
 ### Steps when using Emacs and devpod
 1) `devpod up .` in code directory or even pointing to GitHub directly which builds and starts container if needed.
     The location where to run the Docker container can be choosen from "local Docker", remote Docker on ssh host, Kubernetes and others 
-3) `devpod ssh .` to login into container (setups the port forwarding as well) and run `bin/launchpad`  which starts nREPL sever on port 12345
-4) In Emacs open files from inside container via TRAMP `/ssh:xxxxx` or open the local files 
-5) In Emacs run `cider-connect` to `localhost:12345`
+3) `devpod ssh .` to login into container (setups the port forwarding as well)
+4) run `bin/launchpad`  (or `clj -M:nrepl` or `enriched-clojure -M:nrepl` on 0.2alpha)  which starts nREPL sever on port 12345
+5) In Emacs open files from inside container via TRAMP `/ssh:xxxxx` or open the local files 
+6) In Emacs run `cider-connect` to `localhost:12345`
 
 Step 1) generates as well a new host entry in `.ssh/config` for ease of use for `ssh` . This makes as well all devcontainers (whereever they run) accessible
 in a unified way with a simple `ssh host-name`
